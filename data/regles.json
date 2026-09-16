@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "regles": {
+    "sujet-inverse": {
+      "titre": "Le sujet inversé",
+      "categorie": "accord-sujet-verbe",
+      "explication": "Quand le sujet est placé après le verbe (question, incise, « à peine… que »), il commande quand même l'accord. Pour le trouver, pose la question « qui est-ce qui ? » avant le verbe.",
+      "exemples": ["À peine étais-je averti…", "Ainsi parlaient les anciens.", "« Viens », dit ma mère."]
+    },
+    "sujet-pluriel": {
+      "titre": "Deux sujets = pluriel",
+      "categorie": "accord-sujet-verbe",
+      "explication": "Deux sujets reliés par « et » forment un sujet pluriel : le verbe se met au pluriel.",
+      "exemples": ["La lune et le vent dessinaient des ombres.", "Mon père et ma mère se taisaient."]
+    },
+    "sujet-je-et-autre": {
+      "titre": "« … et moi » = nous",
+      "categorie": "accord-sujet-verbe",
+      "explication": "Si l'un des sujets est « moi » (ou « je »), l'ensemble équivaut à « nous » : le verbe se met à la 1re personne du pluriel.",
+      "exemples": ["Lucile et moi restions au coin du feu.", "Toi et moi partirons demain."]
+    },
+    "sujet-eloigne": {
+      "titre": "Le sujet éloigné du verbe",
+      "categorie": "accord-sujet-verbe",
+      "explication": "Une proposition relative ou un complément peut s'intercaler entre le sujet et son verbe. Supprime mentalement l'intercalation pour retrouver le vrai sujet.",
+      "exemples": ["Les fenêtres, que le vent secouait, s'ébranlaient.", "Le bruit des pas résonnait."]
+    },
+    "sujet-qui": {
+      "titre": "Le pronom relatif « qui »",
+      "categorie": "accord-sujet-verbe",
+      "explication": "« qui » sujet transmet au verbe la personne et le nombre de son antécédent, le mot qu'il remplace.",
+      "exemples": ["C'est moi qui parlais.", "Les oiseaux qui voletaient…"]
+    },
+    "sujet-collectif": {
+      "titre": "Les noms collectifs",
+      "categorie": "accord-sujet-verbe",
+      "explication": "Après « la plupart de », « beaucoup de », « une foule de » + pluriel, le verbe se met au pluriel. Après « chacun », « aucun », « tout le monde », il reste au singulier.",
+      "exemples": ["La plupart des fenêtres étaient ouvertes.", "Tout le monde se taisait."]
+    },
+    "sujet-on": {
+      "titre": "Le pronom « on »",
+      "categorie": "accord-sujet-verbe",
+      "explication": "« on » est toujours 3e personne du singulier, même quand il signifie « nous ».",
+      "exemples": ["On mettait devant elle un guéridon.", "On se retirait sans bruit."]
+    },
+    "imparfait-terminaisons": {
+      "titre": "Les terminaisons de l'imparfait",
+      "categorie": "imparfait",
+      "explication": "À l'imparfait, toutes les terminaisons sont les mêmes : -ais, -ais, -ait, -ions, -iez, -aient. Le « -aient » du pluriel ne s'entend pas : c'est l'accord qui le décide.",
+      "exemples": ["je marchais, il marchait, ils marchaient"]
+    },
+    "imparfait-vs-passe-simple": {
+      "titre": "Imparfait ou passé simple ?",
+      "categorie": "imparfait",
+      "explication": "L'imparfait décrit un décor ou une action qui dure (« il marchait »). Le passé simple raconte une action brève qui survient (« il marcha »). Astuce : remplace par « était en train de » — si ça marche, c'est l'imparfait.",
+      "exemples": ["Il se promenait quand la porte s'ouvrit."]
+    },
+    "imparfait-vs-present": {
+      "titre": "-ais ou -ai ? -ait ou -ez ?",
+      "categorie": "imparfait",
+      "explication": "Ne confonds pas « je marchais » (imparfait) avec « je marchai » (passé simple) ni « vous marchiez » (imparfait) avec « vous marchez » (présent). Change de personne pour entendre la différence.",
+      "exemples": ["Je rêvais / je rêvai", "vous rêviez / vous rêvez"]
+    },
+    "imparfait-yer-ier": {
+      "titre": "Les verbes en -ier, -yer, -gner",
+      "categorie": "imparfait",
+      "explication": "Aux 1re et 2e personnes du pluriel, on écrit deux fois la lettre i : « nous criions », « vous voyiez », « nous craignions ». Le i du radical plus le i de la terminaison.",
+      "exemples": ["nous oubliions", "vous essuyiez"]
+    },
+    "pp-vs-adjectif-verbal": {
+      "titre": "Participe présent ou adjectif verbal ?",
+      "categorie": "participe-present",
+      "explication": "Le participe présent exprime une action : il est INVARIABLE et se reconnaît à son complément ou à sa négation (« des histoires amusant tout le monde »). L'adjectif verbal exprime un état, une qualité : il S'ACCORDE avec le nom (« des histoires amusantes »). Test : si tu peux remplacer par « qui + verbe », c'est le participe présent.",
+      "exemples": ["des enfants obéissant à leur mère (action, invariable)", "des enfants obéissants (qualité, accordé)"]
+    },
+    "pp-orthographe-differente": {
+      "titre": "Quand l'orthographe change",
+      "categorie": "participe-present",
+      "explication": "Certains adjectifs verbaux ne s'écrivent pas comme le participe présent : fatigant / fatiguant, provocant / provoquant, négligent / négligeant, précédent / précédant, différent / différant.",
+      "exemples": ["un travail fatigant", "en fatiguant ses lecteurs"]
+    },
+    "gerondif": {
+      "titre": "Le gérondif « en + -ant »",
+      "categorie": "participe-present",
+      "explication": "Précédé de « en », le -ant est un gérondif : toujours invariable.",
+      "exemples": ["Elle lisait en marchant."]
+    },
+    "lexique-memoire": {
+      "titre": "Les mots à mémoriser",
+      "categorie": "lexique",
+      "explication": "Certains mots ne s'expliquent par aucune règle : il faut les photographier. Regarde la lettre piège, écris le mot trois fois, puis cache-le.",
+      "exemples": ["apercevoir (un seul p)", "carreaux", "relégué"]
+    }
+  }
+}

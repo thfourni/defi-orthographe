@@ -1,0 +1,1634 @@
+{
+  "version": 1,
+  "titre": "Défi Orthographe — 3e",
+  "categories": [
+    {
+      "id": "accord-sujet-verbe",
+      "nom": "Accords sujet-verbe",
+      "nomCourt": "Accords",
+      "couleur": "#7C3AED",
+      "icone": "🎯",
+      "poids": 3
+    },
+    {
+      "id": "lexique",
+      "nom": "Orthographe des mots",
+      "nomCourt": "Lexique",
+      "couleur": "#0EA5E9",
+      "icone": "🔤",
+      "poids": 1
+    },
+    {
+      "id": "imparfait",
+      "nom": "Imparfait",
+      "nomCourt": "Imparfait",
+      "couleur": "#F59E0B",
+      "icone": "⏳",
+      "poids": 1
+    },
+    {
+      "id": "participe-present",
+      "nom": "Participe présent / adjectif verbal",
+      "nomCourt": "Participes",
+      "couleur": "#10B981",
+      "icone": "🔀",
+      "poids": 1
+    }
+  ],
+  "exercices": [
+    {
+      "id": "asv-001",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-inverse",
+      "source": "dictee-combourg",
+      "phrase": "À peine {0}-je averti du danger que la nuit tomba.",
+      "trous": [
+        {
+          "infinitif": "être",
+          "temps": "imparfait",
+          "personne": "1s",
+          "reponses": [
+            "étais"
+          ],
+          "indice": "Qui est averti ? Le sujet « je » est placé après le verbe."
+        }
+      ],
+      "explication": "Sujet inversé : « je » commande l'accord même placé après le verbe. 1re personne du singulier → « étais »."
+    },
+    {
+      "id": "asv-002",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-je-et-autre",
+      "source": "dictee-combourg",
+      "phrase": "La lune et moi {0} des ombres sur le mur.",
+      "trous": [
+        {
+          "infinitif": "dessiner",
+          "temps": "imparfait",
+          "personne": "1p",
+          "reponses": [
+            "dessinions"
+          ],
+          "indice": "« la lune et moi » = « nous »."
+        }
+      ],
+      "explication": "Dès que « moi » fait partie du sujet, l'ensemble équivaut à « nous » : 1re personne du pluriel, « nous dessinions »."
+    },
+    {
+      "id": "asv-003",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 3,
+      "regleId": "sujet-eloigne",
+      "source": "dictee-combourg",
+      "phrase": "Les fenêtres, que le vent secouait sans cesse, {0} dans la nuit.",
+      "trous": [
+        {
+          "infinitif": "s'ébranler",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "s'ébranlaient",
+            "s’ébranlaient"
+          ],
+          "indice": "Supprime la relative : « Les fenêtres … »."
+        }
+      ],
+      "explication": "La relative « que le vent secouait » n'est pas le sujet. Le sujet reste « les fenêtres », pluriel → « s'ébranlaient »."
+    },
+    {
+      "id": "asv-004",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-qui",
+      "source": "dictee-combourg",
+      "phrase": "Des oiseaux qui {0} autour de la tour me réveillaient.",
+      "trous": [
+        {
+          "infinitif": "voleter",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "voletaient"
+          ],
+          "indice": "« qui » remplace « des oiseaux »."
+        }
+      ],
+      "explication": "« qui » transmet au verbe le nombre de son antécédent « des oiseaux » : pluriel → « voletaient »."
+    },
+    {
+      "id": "asv-005",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 1,
+      "regleId": "sujet-pluriel",
+      "phrase": "Mon père et ma mère {0} en silence.",
+      "trous": [
+        {
+          "infinitif": "veiller",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "veillaient"
+          ],
+          "indice": "Deux sujets reliés par « et »."
+        }
+      ],
+      "explication": "Deux sujets coordonnés par « et » font un sujet pluriel : « veillaient »."
+    },
+    {
+      "id": "asv-006",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-on",
+      "phrase": "On {0} devant elle un guéridon et une bougie.",
+      "trous": [
+        {
+          "infinitif": "mettre",
+          "temps": "imparfait",
+          "personne": "3s",
+          "reponses": [
+            "mettait"
+          ],
+          "indice": "« on » est toujours singulier."
+        }
+      ],
+      "explication": "Même quand il signifie « nous », « on » reste 3e personne du singulier : « mettait »."
+    },
+    {
+      "id": "asv-007",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 3,
+      "regleId": "sujet-collectif",
+      "phrase": "La plupart des domestiques {0} déjà retirés.",
+      "trous": [
+        {
+          "infinitif": "s'être",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "s'étaient",
+            "s’étaient"
+          ],
+          "indice": "« la plupart de » + pluriel → verbe au pluriel."
+        }
+      ],
+      "explication": "Après « la plupart des », l'accord se fait avec le complément au pluriel : « s'étaient retirés »."
+    },
+    {
+      "id": "asv-008",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-collectif",
+      "phrase": "Tout le monde {0} dans le grand salon.",
+      "trous": [
+        {
+          "infinitif": "se taire",
+          "temps": "imparfait",
+          "personne": "3s",
+          "reponses": [
+            "se taisait"
+          ],
+          "indice": "« tout le monde » = une seule masse."
+        }
+      ],
+      "explication": "« tout le monde », « chacun », « personne » sont des singuliers : « se taisait »."
+    },
+    {
+      "id": "asv-009",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 3,
+      "regleId": "sujet-inverse",
+      "phrase": "Ainsi {0} les longues soirées d'automne.",
+      "trous": [
+        {
+          "infinitif": "passer",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "passaient"
+          ],
+          "indice": "Qu'est-ce qui passait ? Cherche après le verbe."
+        }
+      ],
+      "explication": "Après « ainsi », le sujet « les longues soirées » est inversé mais reste le sujet : pluriel → « passaient »."
+    },
+    {
+      "id": "asv-010",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 3,
+      "regleId": "sujet-eloigne",
+      "phrase": "Le bruit des pas de mon père {0} sous la voûte.",
+      "trous": [
+        {
+          "infinitif": "résonner",
+          "temps": "imparfait",
+          "personne": "3s",
+          "reponses": [
+            "résonnait"
+          ],
+          "indice": "Ce qui résonne, c'est LE BRUIT, pas les pas."
+        }
+      ],
+      "explication": "Le noyau du sujet est « le bruit », singulier. « des pas de mon père » n'est qu'un complément du nom."
+    },
+    {
+      "id": "asv-011",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-qui",
+      "phrase": "C'est moi qui {0} la porte le soir.",
+      "trous": [
+        {
+          "infinitif": "fermer",
+          "temps": "imparfait",
+          "personne": "1s",
+          "reponses": [
+            "fermais"
+          ],
+          "indice": "« qui » reprend « moi » : 1re personne."
+        }
+      ],
+      "explication": "L'antécédent de « qui » est « moi » : le verbe se met à la 1re personne du singulier, « fermais »."
+    },
+    {
+      "id": "asv-012",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-je-et-autre",
+      "phrase": "Lucile et moi {0} auprès du feu.",
+      "trous": [
+        {
+          "infinitif": "s'asseoir",
+          "temps": "imparfait",
+          "personne": "1p",
+          "reponses": [
+            "nous asseyions",
+            "nous assoyions"
+          ],
+          "indice": "« Lucile et moi » = « nous »."
+        }
+      ],
+      "explication": "« Lucile et moi » équivaut à « nous » : « nous asseyions » (ou « nous assoyions », les deux formes existent)."
+    },
+    {
+      "id": "asv-013",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 1,
+      "regleId": "sujet-pluriel",
+      "phrase": "Les murs et les tours du château {0} très épais.",
+      "trous": [
+        {
+          "infinitif": "être",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "étaient"
+          ],
+          "indice": "Deux sujets au pluriel."
+        }
+      ],
+      "explication": "« Les murs et les tours » : sujet pluriel → « étaient »."
+    },
+    {
+      "id": "asv-014",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 3,
+      "regleId": "sujet-eloigne",
+      "phrase": "La lumière des bougies, posées sur le guéridon, {0} à peine la pièce.",
+      "trous": [
+        {
+          "infinitif": "éclairer",
+          "temps": "imparfait",
+          "personne": "3s",
+          "reponses": [
+            "éclairait"
+          ],
+          "indice": "Qu'est-ce qui éclaire ? La lumière."
+        }
+      ],
+      "explication": "Le sujet est « la lumière », singulier ; « des bougies » est un complément du nom qui ne commande rien."
+    },
+    {
+      "id": "asv-015",
+      "type": "qcm",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-inverse",
+      "consigne": "Quelle phrase est correctement accordée ?",
+      "options": [
+        "Peut-être les enfants dormaient-ils déjà.",
+        "Peut-être les enfants dormait-ils déjà."
+      ],
+      "bonneReponse": 0,
+      "explication": "Le sujet « les enfants », repris par « -ils », est au pluriel : « dormaient »."
+    },
+    {
+      "id": "asv-016",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-qui",
+      "phrase": "Toi qui {0} tout, explique-moi ce bruit.",
+      "trous": [
+        {
+          "infinitif": "savoir",
+          "temps": "présent",
+          "personne": "2s",
+          "reponses": [
+            "sais"
+          ],
+          "indice": "« qui » reprend « toi »."
+        }
+      ],
+      "explication": "L'antécédent « toi » impose la 2e personne du singulier : « sais »."
+    },
+    {
+      "id": "asv-017",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 3,
+      "regleId": "sujet-eloigne",
+      "phrase": "Le chat, dont les miaulements {0} toute la nuit, avait disparu.",
+      "trous": [
+        {
+          "infinitif": "déchirer",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "déchiraient"
+          ],
+          "indice": "Dans la relative, le sujet est « les miaulements »."
+        }
+      ],
+      "explication": "Dans la proposition relative, le sujet du verbe est « les miaulements », pluriel → « déchiraient »."
+    },
+    {
+      "id": "asv-018",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-pluriel",
+      "phrase": "Ni la peur ni le froid ne m'{0} de monter dans la tour.",
+      "trous": [
+        {
+          "infinitif": "empêcher",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "empêchaient"
+          ],
+          "indice": "Deux sujets, même reliés par « ni… ni »."
+        }
+      ],
+      "explication": "Avec « ni… ni », on peut accorder au pluriel quand les deux sujets agissent ensemble : « empêchaient »."
+    },
+    {
+      "id": "asv-019",
+      "type": "qcm",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 3,
+      "regleId": "sujet-collectif",
+      "consigne": "Choisis la forme correcte : « Une foule de souvenirs ___ à ma mémoire. »",
+      "options": [
+        "revenaient",
+        "revenait"
+      ],
+      "bonneReponse": 0,
+      "explication": "Avec un collectif suivi d'un pluriel, on accorde avec ce qui frappe l'esprit : ici la foule des souvenirs, donc le pluriel « revenaient » (le singulier reste tolérable)."
+    },
+    {
+      "id": "asv-020",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-on",
+      "phrase": "On {0} le couvert puis on {1}.",
+      "trous": [
+        {
+          "infinitif": "enlever",
+          "temps": "imparfait",
+          "personne": "3s",
+          "reponses": [
+            "enlevait"
+          ],
+          "indice": "« on » = 3e personne du singulier."
+        },
+        {
+          "infinitif": "se retirer",
+          "temps": "imparfait",
+          "personne": "3s",
+          "reponses": [
+            "se retirait"
+          ],
+          "indice": "Même sujet, même personne."
+        }
+      ],
+      "explication": "Deux verbes, un seul sujet « on » : les deux restent au singulier."
+    },
+    {
+      "id": "asv-021",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 3,
+      "regleId": "sujet-inverse",
+      "phrase": "Que {0} ces ombres sur le mur ?",
+      "trous": [
+        {
+          "infinitif": "signifier",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "signifiaient"
+          ],
+          "indice": "Dans une question, le sujet passe après le verbe."
+        }
+      ],
+      "explication": "Sujet inversé dans l'interrogation : « ces ombres », pluriel → « signifiaient »."
+    },
+    {
+      "id": "asv-022",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 1,
+      "regleId": "sujet-eloigne",
+      "phrase": "Les escaliers de la tour {0} interminables.",
+      "trous": [
+        {
+          "infinitif": "paraître",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "paraissaient"
+          ],
+          "indice": "Le sujet est « les escaliers »."
+        }
+      ],
+      "explication": "« de la tour » est un complément du nom : le sujet reste « les escaliers », pluriel."
+    },
+    {
+      "id": "asv-023",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 3,
+      "regleId": "sujet-je-et-autre",
+      "phrase": "Mon frère et toi {0} restés dans la bibliothèque.",
+      "trous": [
+        {
+          "infinitif": "être",
+          "temps": "imparfait",
+          "personne": "2p",
+          "reponses": [
+            "étiez"
+          ],
+          "indice": "« lui et toi » = « vous »."
+        }
+      ],
+      "explication": "Quand « toi » entre dans le sujet (sans « moi »), l'ensemble vaut « vous » : 2e personne du pluriel."
+    },
+    {
+      "id": "asv-024",
+      "type": "qcm",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-eloigne",
+      "consigne": "Choisis la forme correcte : « Le silence des longues galeries m'___ peur. »",
+      "options": [
+        "faisait",
+        "faisaient"
+      ],
+      "bonneReponse": 0,
+      "explication": "Le sujet est « le silence », singulier. « des longues galeries » ne fait que le compléter."
+    },
+    {
+      "id": "asv-025",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-qui",
+      "phrase": "Ce sont les vents d'automne qui {0} ce bruit.",
+      "trous": [
+        {
+          "infinitif": "faire",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "faisaient"
+          ],
+          "indice": "Antécédent : « les vents »."
+        }
+      ],
+      "explication": "« qui » reprend « les vents d'automne », pluriel → « faisaient »."
+    },
+    {
+      "id": "asv-026",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 3,
+      "regleId": "sujet-inverse",
+      "phrase": "Dans la cour {0} les feuilles mortes.",
+      "trous": [
+        {
+          "infinitif": "tourbillonner",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "tourbillonnaient"
+          ],
+          "indice": "Le complément de lieu placé en tête fait passer le sujet après le verbe."
+        }
+      ],
+      "explication": "Le sujet « les feuilles mortes » est inversé mais commande l'accord : pluriel."
+    },
+    {
+      "id": "asv-027",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-pluriel",
+      "phrase": "Le vent, la pluie et le froid {0} contre les volets.",
+      "trous": [
+        {
+          "infinitif": "battre",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "battaient"
+          ],
+          "indice": "Trois sujets, donc pluriel."
+        }
+      ],
+      "explication": "Une énumération de sujets donne un accord au pluriel : « battaient »."
+    },
+    {
+      "id": "asv-028",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 3,
+      "regleId": "sujet-collectif",
+      "phrase": "Chacun des habitants du château {0} sa chambre.",
+      "trous": [
+        {
+          "infinitif": "regagner",
+          "temps": "imparfait",
+          "personne": "3s",
+          "reponses": [
+            "regagnait"
+          ],
+          "indice": "« chacun » est singulier."
+        }
+      ],
+      "explication": "« chacun » impose le singulier, même suivi d'un complément au pluriel."
+    },
+    {
+      "id": "asv-029",
+      "type": "trou",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-eloigne",
+      "phrase": "Les histoires que nous racontait ma mère {0} longtemps.",
+      "trous": [
+        {
+          "infinitif": "durer",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "duraient"
+          ],
+          "indice": "Sujet du verbe principal : « les histoires »."
+        }
+      ],
+      "explication": "Le sujet du verbe principal est « les histoires » ; « que nous racontait ma mère » est une relative intercalée."
+    },
+    {
+      "id": "asv-030",
+      "type": "qcm",
+      "categorie": "accord-sujet-verbe",
+      "difficulte": 2,
+      "regleId": "sujet-je-et-autre",
+      "consigne": "Choisis la forme correcte : « Ma sœur et moi ___ la nuit tomber. »",
+      "options": [
+        "regardions",
+        "regardaient"
+      ],
+      "bonneReponse": 0,
+      "explication": "« Ma sœur et moi » = « nous » : 1re personne du pluriel, « regardions »."
+    },
+    {
+      "id": "imp-001",
+      "type": "trou",
+      "categorie": "imparfait",
+      "difficulte": 1,
+      "regleId": "imparfait-terminaisons",
+      "phrase": "Je {0} le vent dans les couloirs.",
+      "trous": [
+        {
+          "infinitif": "entendre",
+          "temps": "imparfait",
+          "personne": "1s",
+          "reponses": [
+            "entendais"
+          ],
+          "indice": "1re personne : -ais."
+        }
+      ],
+      "explication": "Imparfait, 1re personne du singulier : radical + -ais."
+    },
+    {
+      "id": "imp-002",
+      "type": "trou",
+      "categorie": "imparfait",
+      "difficulte": 2,
+      "regleId": "imparfait-terminaisons",
+      "source": "dictee-combourg",
+      "phrase": "Les chats {0} dans les greniers.",
+      "trous": [
+        {
+          "infinitif": "miauler",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "miaulaient"
+          ],
+          "indice": "-aient ne s'entend pas, mais il s'écrit."
+        }
+      ],
+      "explication": "3e personne du pluriel : -aient. La terminaison se prononce comme « -ait » mais s'écrit différemment."
+    },
+    {
+      "id": "imp-003",
+      "type": "qcm",
+      "categorie": "imparfait",
+      "difficulte": 2,
+      "regleId": "imparfait-vs-present",
+      "consigne": "Choisis la forme correcte : « Vous ___ souvent dans ce parc. »",
+      "options": [
+        "marchiez",
+        "marchez"
+      ],
+      "bonneReponse": 0,
+      "explication": "« souvent » + récit au passé → imparfait : « vous marchiez ». « vous marchez » serait du présent."
+    },
+    {
+      "id": "imp-004",
+      "type": "trou",
+      "categorie": "imparfait",
+      "difficulte": 3,
+      "regleId": "imparfait-yer-ier",
+      "phrase": "Nous {0} le bruit des pas dans l'escalier.",
+      "trous": [
+        {
+          "infinitif": "oublier",
+          "temps": "imparfait",
+          "personne": "1p",
+          "reponses": [
+            "oubliions"
+          ],
+          "indice": "Le i du radical + le i de la terminaison."
+        }
+      ],
+      "explication": "Verbe en -ier : à l'imparfait, 1re personne du pluriel, on écrit deux i → « nous oubliions »."
+    },
+    {
+      "id": "imp-005",
+      "type": "trou",
+      "categorie": "imparfait",
+      "difficulte": 3,
+      "regleId": "imparfait-yer-ier",
+      "phrase": "Vous {0} la lune à travers les carreaux.",
+      "trous": [
+        {
+          "infinitif": "voir",
+          "temps": "imparfait",
+          "personne": "2p",
+          "reponses": [
+            "voyiez"
+          ],
+          "indice": "Verbe en -oir : radical « voy- » + « -iez »."
+        }
+      ],
+      "explication": "« nous voyions », « vous voyiez » : le y du radical suivi du i de la terminaison."
+    },
+    {
+      "id": "imp-006",
+      "type": "qcm",
+      "categorie": "imparfait",
+      "difficulte": 3,
+      "regleId": "imparfait-vs-passe-simple",
+      "consigne": "Quel temps convient ? « Il ___ dans la galerie quand la porte s'ouvrit. »",
+      "options": [
+        "se promenait",
+        "se promena"
+      ],
+      "bonneReponse": 0,
+      "explication": "L'action qui dure et sert de décor est à l'imparfait ; l'action brève qui survient (« s'ouvrit ») est au passé simple."
+    },
+    {
+      "id": "imp-007",
+      "type": "trou",
+      "categorie": "imparfait",
+      "difficulte": 2,
+      "regleId": "imparfait-terminaisons",
+      "phrase": "Tu {0} toujours la même chanson.",
+      "trous": [
+        {
+          "infinitif": "chanter",
+          "temps": "imparfait",
+          "personne": "2s",
+          "reponses": [
+            "chantais"
+          ],
+          "indice": "2e personne du singulier : -ais."
+        }
+      ],
+      "explication": "À l'imparfait, « je » et « tu » prennent tous les deux -ais."
+    },
+    {
+      "id": "imp-008",
+      "type": "trou",
+      "categorie": "imparfait",
+      "difficulte": 2,
+      "regleId": "imparfait-terminaisons",
+      "phrase": "Mon père {0} une robe de ratine blanche.",
+      "trous": [
+        {
+          "infinitif": "porter",
+          "temps": "imparfait",
+          "personne": "3s",
+          "reponses": [
+            "portait"
+          ],
+          "indice": "3e personne du singulier : -ait."
+        }
+      ],
+      "explication": "3e personne du singulier : -ait, sans « -ent »."
+    },
+    {
+      "id": "imp-009",
+      "type": "qcm",
+      "categorie": "imparfait",
+      "difficulte": 3,
+      "regleId": "imparfait-vs-present",
+      "consigne": "Choisis la forme correcte : « Ce soir-là, je ___ de peur. »",
+      "options": [
+        "tremblais",
+        "tremblai"
+      ],
+      "bonneReponse": 0,
+      "explication": "« tremblais » = imparfait (état qui dure) ; « tremblai » = passé simple (action ponctuelle). Ici, la peur dure."
+    },
+    {
+      "id": "imp-010",
+      "type": "trou",
+      "categorie": "imparfait",
+      "difficulte": 2,
+      "regleId": "imparfait-terminaisons",
+      "phrase": "Les domestiques {0} le couvert sans un mot.",
+      "trous": [
+        {
+          "infinitif": "enlever",
+          "temps": "imparfait",
+          "personne": "3p",
+          "reponses": [
+            "enlevaient"
+          ],
+          "indice": "Sujet pluriel → -aient."
+        }
+      ],
+      "explication": "Sujet au pluriel : terminaison -aient."
+    },
+    {
+      "id": "imp-011",
+      "type": "trou",
+      "categorie": "imparfait",
+      "difficulte": 3,
+      "regleId": "imparfait-yer-ier",
+      "phrase": "Nous {0} de ne pas faire de bruit.",
+      "trous": [
+        {
+          "infinitif": "craindre",
+          "temps": "imparfait",
+          "personne": "1p",
+          "reponses": [
+            "craignions"
+          ],
+          "indice": "Radical « craign- » + « -ions »."
+        }
+      ],
+      "explication": "Verbes en -gner, -ndre : « nous craignions » avec le i de la terminaison après le gn."
+    },
+    {
+      "id": "imp-012",
+      "type": "trou",
+      "categorie": "imparfait",
+      "difficulte": 2,
+      "regleId": "imparfait-terminaisons",
+      "phrase": "Nous {0} au coin du feu jusqu'à la nuit.",
+      "trous": [
+        {
+          "infinitif": "rester",
+          "temps": "imparfait",
+          "personne": "1p",
+          "reponses": [
+            "restions"
+          ],
+          "indice": "1re personne du pluriel : -ions."
+        }
+      ],
+      "explication": "1re personne du pluriel de l'imparfait : -ions."
+    },
+    {
+      "id": "imp-013",
+      "type": "qcm",
+      "categorie": "imparfait",
+      "difficulte": 2,
+      "regleId": "imparfait-terminaisons",
+      "consigne": "Choisis la forme correcte : « Les bougies ___ sur le guéridon. »",
+      "options": [
+        "brûlaient",
+        "brûlait"
+      ],
+      "bonneReponse": 0,
+      "explication": "« les bougies » est pluriel : -aient."
+    },
+    {
+      "id": "imp-014",
+      "type": "trou",
+      "categorie": "imparfait",
+      "difficulte": 3,
+      "regleId": "imparfait-vs-passe-simple",
+      "phrase": "Chaque soir, la cloche {0} à neuf heures.",
+      "trous": [
+        {
+          "infinitif": "sonner",
+          "temps": "imparfait",
+          "personne": "3s",
+          "reponses": [
+            "sonnait"
+          ],
+          "indice": "« chaque soir » = action répétée."
+        }
+      ],
+      "explication": "Une action habituelle, répétée, se met à l'imparfait, jamais au passé simple."
+    },
+    {
+      "id": "imp-015",
+      "type": "trou",
+      "categorie": "imparfait",
+      "difficulte": 2,
+      "regleId": "imparfait-terminaisons",
+      "phrase": "Il {0} nécessaire de fermer les volets.",
+      "trous": [
+        {
+          "infinitif": "être",
+          "temps": "imparfait",
+          "personne": "3s",
+          "reponses": [
+            "était"
+          ],
+          "indice": "« il » impersonnel : singulier."
+        }
+      ],
+      "explication": "Le « il » impersonnel est toujours 3e personne du singulier."
+    },
+    {
+      "id": "lex-001",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 3,
+      "regleId": "lexique-memoire",
+      "source": "dictee-combourg",
+      "mot": "apercevais",
+      "prononce": "je n'apercevais plus rien",
+      "phraseContexte": "Je n'{mot} plus les carreaux de la fenêtre.",
+      "piege": "un seul p",
+      "explication": "« Apercevoir » ne prend qu'un seul p, contrairement à « apparaître » ou « appartenir »."
+    },
+    {
+      "id": "lex-002",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 2,
+      "regleId": "lexique-memoire",
+      "source": "dictee-combourg",
+      "mot": "carreaux",
+      "prononce": "les carreaux de la fenêtre",
+      "phraseContexte": "La lune éclairait les {mot} de la fenêtre.",
+      "piege": "deux r, pluriel en -x",
+      "explication": "« carreaux » : deux r, et le pluriel des mots en -eau se fait en -x."
+    },
+    {
+      "id": "lex-003",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 3,
+      "regleId": "lexique-memoire",
+      "source": "dictee-combourg",
+      "mot": "voletaient",
+      "prononce": "les oiseaux voletaient",
+      "phraseContexte": "Des oiseaux {mot} autour de la tour.",
+      "piege": "un seul t, terminaison -aient",
+      "explication": "« voleter » garde un seul t à l'imparfait : « voletaient » (le doublement n'a lieu qu'au présent : « il volette »)."
+    },
+    {
+      "id": "lex-004",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 1,
+      "regleId": "lexique-memoire",
+      "source": "dictee-combourg",
+      "mot": "courir",
+      "prononce": "se mettre à courir",
+      "phraseContexte": "Je me mettais à {mot} dans l'escalier.",
+      "piege": "un seul r à l'infinitif",
+      "explication": "« courir » prend un seul r à l'infinitif, mais deux au futur : « je courrai »."
+    },
+    {
+      "id": "lex-005",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 3,
+      "regleId": "lexique-memoire",
+      "source": "dictee-combourg",
+      "mot": "ébranlée",
+      "prononce": "la porte était ébranlée par le vent",
+      "phraseContexte": "La porte était {mot} par le vent.",
+      "piege": "accent aigu, pas de accent circonflexe",
+      "explication": "« ébranlée » : é initial, pas de circonflexe, et le e final de l'accord au féminin."
+    },
+    {
+      "id": "lex-006",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 3,
+      "regleId": "lexique-memoire",
+      "source": "dictee-combourg",
+      "mot": "miaulement",
+      "prononce": "un long miaulement de chat",
+      "phraseContexte": "J'entendais le {mot} d'un chat.",
+      "piege": "le e muet avant -ment",
+      "explication": "« miaulement » garde le e du verbe « miauler » avant le suffixe -ment."
+    },
+    {
+      "id": "lex-007",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 2,
+      "regleId": "lexique-memoire",
+      "source": "dictee-combourg",
+      "mot": "quelquefois",
+      "prononce": "quelquefois, le soir",
+      "phraseContexte": "{mot}, le soir, je montais dans la tour.",
+      "piege": "en un seul mot",
+      "explication": "« quelquefois » s'écrit en un seul mot quand il signifie « parfois »."
+    },
+    {
+      "id": "lex-008",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 3,
+      "regleId": "lexique-memoire",
+      "source": "dictee-combourg",
+      "mot": "relégué",
+      "prononce": "j'étais relégué dans la tour",
+      "phraseContexte": "J'étais {mot} dans une chambre isolée.",
+      "piege": "deux accents aigus",
+      "explication": "« relégué » : accent aigu sur le premier é et sur le dernier é."
+    },
+    {
+      "id": "lex-009",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 2,
+      "regleId": "lexique-memoire",
+      "mot": "obscurité",
+      "prononce": "dans l'obscurité du couloir",
+      "phraseContexte": "Je marchais dans l'{mot}.",
+      "piege": "le b qui ne s'entend pas",
+      "explication": "« obscurité » contient un b muet, comme « obscur »."
+    },
+    {
+      "id": "lex-010",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 2,
+      "regleId": "lexique-memoire",
+      "mot": "escalier",
+      "prononce": "en haut de l'escalier",
+      "phraseContexte": "Je montais l'{mot} à tâtons.",
+      "piege": "un seul l",
+      "explication": "« escalier » ne prend qu'un seul l."
+    },
+    {
+      "id": "lex-011",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 3,
+      "regleId": "lexique-memoire",
+      "mot": "ténèbres",
+      "prononce": "les ténèbres du château",
+      "phraseContexte": "Les {mot} envahissaient la galerie.",
+      "piege": "accent aigu puis accent grave",
+      "explication": "« ténèbres » : é puis è. Le mot est toujours au pluriel."
+    },
+    {
+      "id": "lex-012",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 2,
+      "regleId": "lexique-memoire",
+      "mot": "silhouette",
+      "prononce": "une silhouette dans le couloir",
+      "phraseContexte": "Une {mot} passa devant la porte.",
+      "piege": "le h après le l, deux t",
+      "explication": "« silhouette » : un h après le l, et deux t avant le e final."
+    },
+    {
+      "id": "lex-013",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 2,
+      "regleId": "lexique-memoire",
+      "mot": "appartenait",
+      "prononce": "cette chambre appartenait à ma mère",
+      "phraseContexte": "Cette chambre {mot} à ma mère.",
+      "piege": "deux p, un seul t",
+      "explication": "« appartenir » prend deux p — au contraire de « apercevoir »."
+    },
+    {
+      "id": "lex-014",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 3,
+      "regleId": "lexique-memoire",
+      "mot": "tranquille",
+      "prononce": "une nuit tranquille",
+      "phraseContexte": "La nuit était enfin {mot}.",
+      "piege": "deux l",
+      "explication": "« tranquille » prend deux l, comme « tranquillité »."
+    },
+    {
+      "id": "lex-015",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 2,
+      "regleId": "lexique-memoire",
+      "mot": "lueur",
+      "prononce": "une faible lueur de bougie",
+      "phraseContexte": "Une faible {mot} tremblait au loin.",
+      "piege": "pas de e après le u",
+      "explication": "« lueur » s'écrit sans e entre le u et le u : l-u-e-u-r."
+    },
+    {
+      "id": "lex-016",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 3,
+      "regleId": "lexique-memoire",
+      "mot": "bruyamment",
+      "prononce": "le vent soufflait bruyamment",
+      "phraseContexte": "Le vent soufflait {mot}.",
+      "piege": "-amment, pas -ament",
+      "explication": "Les adverbes formés sur un adjectif en -ant s'écrivent -amment : bruyant → bruyamment."
+    },
+    {
+      "id": "lex-017",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 3,
+      "regleId": "lexique-memoire",
+      "mot": "cependant",
+      "prononce": "cependant, je ne bougeais pas",
+      "phraseContexte": "{mot}, je ne bougeais pas.",
+      "piege": "en un seul mot, -ant final",
+      "explication": "« cependant » s'écrit en un seul mot et se termine par -ant."
+    },
+    {
+      "id": "lex-018",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 2,
+      "regleId": "lexique-memoire",
+      "mot": "davantage",
+      "prononce": "je ne savais rien davantage",
+      "phraseContexte": "Je n'en savais rien {mot}.",
+      "piege": "en un seul mot, sans s",
+      "explication": "« davantage » (= plus) s'écrit en un seul mot, à ne pas confondre avec « d'avantage » (= de profit)."
+    },
+    {
+      "id": "lex-019",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 2,
+      "regleId": "lexique-memoire",
+      "mot": "malgré",
+      "prononce": "malgré le froid",
+      "phraseContexte": "{mot} le froid, je restais à la fenêtre.",
+      "piege": "un seul mot, accent aigu",
+      "explication": "« malgré » s'écrit en un seul mot, avec un accent aigu et sans s."
+    },
+    {
+      "id": "lex-020",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 3,
+      "regleId": "lexique-memoire",
+      "mot": "rez-de-chaussée",
+      "prononce": "les chambres du rez-de-chaussée",
+      "phraseContexte": "Les chambres du {mot} étaient vides.",
+      "piege": "deux traits d'union, deux s",
+      "explication": "« rez-de-chaussée » : deux traits d'union, et « chaussée » avec deux s et un accent aigu."
+    },
+    {
+      "id": "lex-021",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 2,
+      "regleId": "lexique-memoire",
+      "mot": "hurlement",
+      "prononce": "le hurlement du vent",
+      "phraseContexte": "Le {mot} du vent me réveilla.",
+      "piege": "h aspiré, e avant -ment",
+      "explication": "« hurlement » garde le e du verbe « hurler » avant -ment."
+    },
+    {
+      "id": "lex-022",
+      "type": "mot",
+      "categorie": "lexique",
+      "difficulte": 3,
+      "regleId": "lexique-memoire",
+      "mot": "aperçu",
+      "prononce": "je l'avais aperçu de loin",
+      "phraseContexte": "Je l'avais {mot} de loin.",
+      "piege": "un seul p, cédille",
+      "explication": "« aperçu » : un seul p, et une cédille sous le c devant le u pour garder le son [s]."
+    },
+    {
+      "id": "pp-001",
+      "type": "tri",
+      "categorie": "participe-present",
+      "difficulte": 2,
+      "regleId": "pp-vs-adjectif-verbal",
+      "consigne": "Participe présent (invariable) ou adjectif verbal (accordé) ?",
+      "etiquettes": [
+        {
+          "id": "participe-present",
+          "libelle": "Participe présent",
+          "aide": "action, invariable"
+        },
+        {
+          "id": "adjectif-verbal",
+          "libelle": "Adjectif verbal",
+          "aide": "qualité, accordé"
+        }
+      ],
+      "items": [
+        {
+          "phrase": "des histoires amusant tout le monde",
+          "reponse": "participe-present"
+        },
+        {
+          "phrase": "des histoires amusantes",
+          "reponse": "adjectif-verbal"
+        },
+        {
+          "phrase": "des enfants obéissant à leur mère",
+          "reponse": "participe-present"
+        },
+        {
+          "phrase": "des enfants obéissants",
+          "reponse": "adjectif-verbal"
+        }
+      ],
+      "explication": "Un complément après le mot en -ant (« tout le monde », « à leur mère ») signale le participe présent : il reste invariable. Seul, décrivant une qualité, c'est un adjectif verbal : il s'accorde."
+    },
+    {
+      "id": "pp-002",
+      "type": "tri",
+      "categorie": "participe-present",
+      "difficulte": 3,
+      "regleId": "pp-vs-adjectif-verbal",
+      "consigne": "Classe ces groupes.",
+      "etiquettes": [
+        {
+          "id": "participe-present",
+          "libelle": "Participe présent",
+          "aide": "action, invariable"
+        },
+        {
+          "id": "adjectif-verbal",
+          "libelle": "Adjectif verbal",
+          "aide": "qualité, accordé"
+        }
+      ],
+      "items": [
+        {
+          "phrase": "des ombres glissant le long du mur",
+          "reponse": "participe-present"
+        },
+        {
+          "phrase": "des couloirs glissants",
+          "reponse": "adjectif-verbal"
+        },
+        {
+          "phrase": "une lueur tremblant dans la nuit",
+          "reponse": "participe-present"
+        },
+        {
+          "phrase": "une voix tremblante",
+          "reponse": "adjectif-verbal"
+        }
+      ],
+      "explication": "Test : si tu peux remplacer par « qui + verbe » (« des ombres qui glissaient »), c'est le participe présent, invariable."
+    },
+    {
+      "id": "pp-003",
+      "type": "qcm",
+      "categorie": "participe-present",
+      "difficulte": 2,
+      "regleId": "pp-vs-adjectif-verbal",
+      "consigne": "Choisis la forme correcte : « J'entendais des chats ___ dans les greniers. »",
+      "options": [
+        "miaulant",
+        "miaulants"
+      ],
+      "bonneReponse": 0,
+      "explication": "Ici « miaulant » exprime l'action que font les chats : participe présent, invariable."
+    },
+    {
+      "id": "pp-004",
+      "type": "qcm",
+      "categorie": "participe-present",
+      "difficulte": 2,
+      "regleId": "pp-vs-adjectif-verbal",
+      "consigne": "Choisis la forme correcte : « Ce sont des enfants très ___. »",
+      "options": [
+        "obéissants",
+        "obéissant"
+      ],
+      "bonneReponse": 0,
+      "explication": "« très » annonce un adjectif : c'est une qualité, donc un adjectif verbal, qui s'accorde."
+    },
+    {
+      "id": "pp-005",
+      "type": "qcm",
+      "categorie": "participe-present",
+      "difficulte": 3,
+      "regleId": "pp-orthographe-differente",
+      "consigne": "Choisis la forme correcte : « C'était un travail ___. »",
+      "options": [
+        "fatigant",
+        "fatiguant"
+      ],
+      "bonneReponse": 0,
+      "explication": "L'adjectif verbal perd le u : « un travail fatigant ». Le participe présent le garde : « en fatiguant ses lecteurs »."
+    },
+    {
+      "id": "pp-006",
+      "type": "qcm",
+      "categorie": "participe-present",
+      "difficulte": 3,
+      "regleId": "pp-orthographe-differente",
+      "consigne": "Choisis la forme correcte : « Le jour ___, nous étions partis. »",
+      "options": [
+        "précédent",
+        "précédant"
+      ],
+      "bonneReponse": 0,
+      "explication": "« le jour précédent » est un adjectif (on peut dire « le jour d'avant »). Le participe présent s'écrit « précédant » : « la nuit précédant le départ »."
+    },
+    {
+      "id": "pp-007",
+      "type": "qcm",
+      "categorie": "participe-present",
+      "difficulte": 3,
+      "regleId": "gerondif",
+      "consigne": "Choisis la forme correcte : « Elles avançaient en ___ sur les marches. »",
+      "options": [
+        "glissant",
+        "glissantes"
+      ],
+      "bonneReponse": 0,
+      "explication": "Après « en », c'est un gérondif : toujours invariable."
+    },
+    {
+      "id": "pp-008",
+      "type": "tri",
+      "categorie": "participe-present",
+      "difficulte": 3,
+      "regleId": "pp-orthographe-differente",
+      "consigne": "Participe présent ou adjectif verbal ?",
+      "etiquettes": [
+        {
+          "id": "participe-present",
+          "libelle": "Participe présent",
+          "aide": "action, invariable"
+        },
+        {
+          "id": "adjectif-verbal",
+          "libelle": "Adjectif verbal",
+          "aide": "qualité, accordé"
+        }
+      ],
+      "items": [
+        {
+          "phrase": "des élèves négligeant leurs devoirs",
+          "reponse": "participe-present"
+        },
+        {
+          "phrase": "des élèves négligents",
+          "reponse": "adjectif-verbal"
+        },
+        {
+          "phrase": "des gestes provoquant la colère",
+          "reponse": "participe-present"
+        },
+        {
+          "phrase": "des gestes provocants",
+          "reponse": "adjectif-verbal"
+        }
+      ],
+      "explication": "Attention, l'orthographe change aussi : négligeant / négligent, provoquant / provocant."
+    },
+    {
+      "id": "pp-009",
+      "type": "qcm",
+      "categorie": "participe-present",
+      "difficulte": 2,
+      "regleId": "pp-vs-adjectif-verbal",
+      "consigne": "Choisis la forme correcte : « Des vents ___ les volets nous réveillèrent. »",
+      "options": [
+        "ébranlant",
+        "ébranlants"
+      ],
+      "bonneReponse": 0,
+      "explication": "« les volets » est le complément du mot en -ant : c'est un participe présent, invariable."
+    },
+    {
+      "id": "pp-010",
+      "type": "qcm",
+      "categorie": "participe-present",
+      "difficulte": 2,
+      "regleId": "pp-vs-adjectif-verbal",
+      "consigne": "Choisis la forme correcte : « Ces soirées étaient ___. »",
+      "options": [
+        "charmantes",
+        "charmant"
+      ],
+      "bonneReponse": 0,
+      "explication": "Après le verbe « être », c'est un attribut : adjectif verbal accordé avec « ces soirées »."
+    },
+    {
+      "id": "pp-011",
+      "type": "tri",
+      "categorie": "participe-present",
+      "difficulte": 2,
+      "regleId": "gerondif",
+      "consigne": "Invariable dans tous les cas ?",
+      "etiquettes": [
+        {
+          "id": "participe-present",
+          "libelle": "Invariable",
+          "aide": "gérondif ou participe présent"
+        },
+        {
+          "id": "adjectif-verbal",
+          "libelle": "S'accorde",
+          "aide": "adjectif verbal"
+        }
+      ],
+      "items": [
+        {
+          "phrase": "en courant dans la galerie",
+          "reponse": "participe-present"
+        },
+        {
+          "phrase": "des eaux courantes",
+          "reponse": "adjectif-verbal"
+        },
+        {
+          "phrase": "en riant très fort",
+          "reponse": "participe-present"
+        },
+        {
+          "phrase": "des visages riants",
+          "reponse": "adjectif-verbal"
+        }
+      ],
+      "explication": "« en + -ant » est un gérondif, toujours invariable, quelle que soit la suite de la phrase."
+    },
+    {
+      "id": "pp-012",
+      "type": "qcm",
+      "categorie": "participe-present",
+      "difficulte": 3,
+      "regleId": "pp-orthographe-differente",
+      "consigne": "Choisis la forme correcte : « Ils partirent, ___ de nous prévenir. »",
+      "options": [
+        "négligeant",
+        "négligent"
+      ],
+      "bonneReponse": 0,
+      "explication": "Ici le mot exprime l'action (« ils ont négligé de… ») : participe présent « négligeant », avec le e."
+    }
+  ],
+  "dictees": [
+    {
+      "id": "combourg-p1",
+      "titre": "Les soirées d'automne à Combourg",
+      "auteur": "Chateaubriand, Mémoires d'outre-tombe (livre III)",
+      "niveau": "3e",
+      "segments": [
+        {
+          "id": "s1",
+          "texte": "Les soirées d'automne et d'hiver étaient d'une autre nature.",
+          "pieges": [
+            {
+              "mot": "étaient",
+              "categorie": "accord-sujet-verbe",
+              "regleId": "sujet-pluriel"
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "texte": "Ma mère se jetait, en soupirant, sur un vieux lit de jour ; on mettait devant elle un guéridon avec une bougie.",
+          "pieges": [
+            {
+              "mot": "soupirant",
+              "categorie": "participe-present",
+              "regleId": "gerondif"
+            },
+            {
+              "mot": "mettait",
+              "categorie": "accord-sujet-verbe",
+              "regleId": "sujet-on"
+            },
+            {
+              "mot": "guéridon",
+              "categorie": "lexique"
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "texte": "Je m'asseyais auprès du feu avec Lucile ; les domestiques enlevaient le couvert et se retiraient.",
+          "pieges": [
+            {
+              "mot": "m'asseyais",
+              "categorie": "imparfait",
+              "regleId": "imparfait-terminaisons"
+            },
+            {
+              "mot": "enlevaient",
+              "categorie": "accord-sujet-verbe",
+              "regleId": "sujet-pluriel"
+            },
+            {
+              "mot": "retiraient",
+              "categorie": "accord-sujet-verbe",
+              "regleId": "sujet-pluriel"
+            }
+          ]
+        },
+        {
+          "id": "s4",
+          "texte": "Mon père commençait alors une promenade, qui ne cessait qu'à l'heure de son coucher.",
+          "pieges": [
+            {
+              "mot": "commençait",
+              "categorie": "lexique"
+            },
+            {
+              "mot": "cessait",
+              "categorie": "accord-sujet-verbe",
+              "regleId": "sujet-qui"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "texte": "Bientôt on n'apercevait plus dans la salle que la lueur tremblante d'une bougie.",
+          "pieges": [
+            {
+              "mot": "apercevait",
+              "categorie": "lexique"
+            },
+            {
+              "mot": "tremblante",
+              "categorie": "participe-present",
+              "regleId": "pp-vs-adjectif-verbal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combourg-p2",
+      "titre": "La chambre de la tour",
+      "auteur": "Chateaubriand, Mémoires d'outre-tombe (livre III) — d'après",
+      "niveau": "3e",
+      "segments": [
+        {
+          "id": "s1",
+          "texte": "J'étais relégué, dans le donjon, à une chambre isolée du reste du château.",
+          "pieges": [
+            {
+              "mot": "relégué",
+              "categorie": "lexique"
+            },
+            {
+              "mot": "isolée",
+              "categorie": "accord-sujet-verbe"
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "texte": "Les fenêtres, ébranlées par le vent, s'ouvraient quelquefois au milieu de la nuit.",
+          "pieges": [
+            {
+              "mot": "ébranlées",
+              "categorie": "lexique"
+            },
+            {
+              "mot": "s'ouvraient",
+              "categorie": "accord-sujet-verbe",
+              "regleId": "sujet-eloigne"
+            },
+            {
+              "mot": "quelquefois",
+              "categorie": "lexique"
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "texte": "J'entendais alors le miaulement des chats et le hurlement du vent dans les couloirs.",
+          "pieges": [
+            {
+              "mot": "miaulement",
+              "categorie": "lexique"
+            },
+            {
+              "mot": "hurlement",
+              "categorie": "lexique"
+            }
+          ]
+        },
+        {
+          "id": "s4",
+          "texte": "Des oiseaux qui voletaient contre les carreaux me réveillaient avant le jour.",
+          "pieges": [
+            {
+              "mot": "voletaient",
+              "categorie": "accord-sujet-verbe",
+              "regleId": "sujet-qui"
+            },
+            {
+              "mot": "carreaux",
+              "categorie": "lexique"
+            },
+            {
+              "mot": "réveillaient",
+              "categorie": "accord-sujet-verbe",
+              "regleId": "sujet-eloigne"
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "texte": "Je n'apercevais plus rien, et je me mettais à courir dans l'escalier obscur.",
+          "pieges": [
+            {
+              "mot": "apercevais",
+              "categorie": "lexique"
+            },
+            {
+              "mot": "courir",
+              "categorie": "lexique"
+            },
+            {
+              "mot": "escalier",
+              "categorie": "lexique"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

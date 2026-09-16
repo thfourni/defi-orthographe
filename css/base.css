@@ -1,0 +1,73 @@
+/* ---- Réinitialisation et fondations ---- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+
+:root {
+  --violet: #7C3AED;
+  --violet-clair: #EDE9FE;
+  --bleu: #0EA5E9;
+  --bleu-clair: #E0F2FE;
+  --orange: #F59E0B;
+  --orange-clair: #FEF3C7;
+  --vert: #10B981;
+  --vert-clair: #D1FAE5;
+  --rouge: #EF4444;
+  --rouge-clair: #FEE2E2;
+
+  --encre: #1E1B4B;
+  --encre-douce: #4C4A6B;
+  --gris: #94A3B8;
+  --bord: #E2E8F0;
+  --fond: #F8FAFC;
+  --carte: #FFFFFF;
+
+  --rayon: 16px;
+  --rayon-s: 10px;
+  --ombre: 0 1px 2px rgba(30, 27, 75, .06), 0 8px 24px rgba(30, 27, 75, .08);
+  --ombre-basse: 0 1px 3px rgba(30, 27, 75, .1);
+  --gouttiere: 16px;
+  --touche: 52px; /* hauteur minimale d'une cible tactile */
+  --safe-bas: env(safe-area-inset-bottom, 0px);
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: "Nunito", "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--fond);
+  color: var(--encre);
+  line-height: 1.5;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3 { line-height: 1.2; font-weight: 800; letter-spacing: -0.01em; }
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.05rem; }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; border: none; background: none; }
+input { -webkit-appearance: none; appearance: none; }
+
+ul { list-style: none; padding: 0; }
+
+.invisible { display: none !important; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+
+/* Couleurs par catégorie, appliquées via data-cat */
+[data-cat="accord-sujet-verbe"] { --cat: var(--violet); --cat-clair: var(--violet-clair); }
+[data-cat="lexique"]            { --cat: var(--bleu);   --cat-clair: var(--bleu-clair); }
+[data-cat="imparfait"]          { --cat: var(--orange); --cat-clair: var(--orange-clair); }
+[data-cat="participe-present"]  { --cat: var(--vert);   --cat-clair: var(--vert-clair); }
+[data-cat="dictee"]             { --cat: var(--encre);  --cat-clair: #E2E8F0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

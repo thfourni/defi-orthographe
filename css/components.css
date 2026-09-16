@@ -1,0 +1,141 @@
+/* ---- Boutons ---- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: var(--touche); padding: 14px 20px;
+  border-radius: var(--rayon); font-weight: 800; font-size: 1rem;
+  background: var(--bord); color: var(--encre);
+  transition: transform .12s ease, filter .12s ease;
+  touch-action: manipulation; user-select: none;
+}
+.btn:active { transform: scale(.97); }
+.btn:disabled { opacity: .45; pointer-events: none; }
+.btn--primaire { background: linear-gradient(135deg, var(--violet), #A855F7); color: #fff; box-shadow: 0 6px 16px rgba(124, 58, 237, .35); }
+.btn--succes   { background: var(--vert); color: #fff; }
+.btn--fantome  { background: var(--carte); border: 2px solid var(--bord); }
+.btn--bloc     { display: flex; width: 100%; }
+.btn--grand    { min-height: 60px; font-size: 1.1rem; }
+.btn:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; }
+
+.btn-icone {
+  width: var(--touche); height: var(--touche); border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--carte); box-shadow: var(--ombre-basse); font-size: 1.2rem;
+}
+
+/* ---- Cartes ---- */
+.carte {
+  background: var(--carte); border-radius: var(--rayon);
+  padding: 18px; box-shadow: var(--ombre);
+}
+.carte--plate { box-shadow: none; border: 2px solid var(--bord); }
+
+/* ---- Barres de progression ---- */
+.jauge { height: 10px; border-radius: 99px; background: var(--bord); overflow: hidden; }
+.jauge > i { display: block; height: 100%; border-radius: 99px; background: var(--cat, var(--violet)); transition: width .4s ease; }
+
+.progression-ligne { display: grid; gap: 6px; margin-bottom: 14px; }
+.progression-ligne header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: .9rem; }
+.progression-ligne strong { font-weight: 800; }
+.progression-ligne .valeur { color: var(--encre-douce); font-variant-numeric: tabular-nums; }
+
+/* ---- Pastilles et badges ---- */
+.pastille {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 12px; border-radius: 99px; font-size: .82rem; font-weight: 800;
+  background: var(--cat-clair, var(--violet-clair)); color: var(--cat, var(--violet));
+}
+
+.badge {
+  display: grid; justify-items: center; gap: 6px; text-align: center;
+  padding: 14px 8px; border-radius: var(--rayon); background: var(--carte);
+  border: 2px solid var(--bord);
+}
+.badge .emoji { font-size: 2rem; filter: grayscale(1); opacity: .35; }
+.badge .nom { font-size: .78rem; font-weight: 800; color: var(--gris); }
+.badge[data-obtenu="oui"] { border-color: var(--violet); background: var(--violet-clair); }
+.badge[data-obtenu="oui"] .emoji { filter: none; opacity: 1; }
+.badge[data-obtenu="oui"] .nom { color: var(--violet); }
+
+/* ---- Statistiques en tuiles ---- */
+.tuiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.tuile { background: var(--carte); border-radius: var(--rayon); padding: 14px 10px; text-align: center; box-shadow: var(--ombre-basse); }
+.tuile .chiffre { font-size: 1.5rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.tuile .libelle { font-size: .72rem; color: var(--encre-douce); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+
+/* ---- Champs de saisie ---- */
+.champ {
+  width: 100%; min-height: var(--touche); padding: 13px 16px;
+  border: 2px solid var(--bord); border-radius: var(--rayon-s);
+  background: var(--carte); font-size: 1.1rem; font-weight: 700;
+}
+.champ:focus { outline: none; border-color: var(--violet); box-shadow: 0 0 0 4px var(--violet-clair); }
+.champ[data-etat="juste"] { border-color: var(--vert); background: var(--vert-clair); }
+.champ[data-etat="faux"]  { border-color: var(--rouge); background: var(--rouge-clair); }
+
+.zone-texte { min-height: 110px; resize: vertical; line-height: 1.6; font-weight: 600; }
+
+/* ---- Options de choix ---- */
+.option {
+  display: flex; align-items: center; gap: 12px; width: 100%; text-align: left;
+  min-height: var(--touche); padding: 14px 16px; margin-bottom: 10px;
+  border: 2px solid var(--bord); border-radius: var(--rayon); background: var(--carte);
+  font-weight: 700; transition: transform .1s ease;
+}
+.option:active { transform: scale(.98); }
+.option[data-etat="juste"] { border-color: var(--vert); background: var(--vert-clair); }
+.option[data-etat="faux"]  { border-color: var(--rouge); background: var(--rouge-clair); }
+.option[data-choisi="oui"] { border-color: var(--violet); }
+
+/* ---- Retour après réponse ---- */
+.retour { border-radius: var(--rayon); padding: 16px; margin-top: 14px; animation: monte .22s ease; }
+.retour[data-juste="oui"]  { background: var(--vert-clair);  border-left: 6px solid var(--vert); }
+.retour[data-juste="non"]  { background: var(--rouge-clair); border-left: 6px solid var(--rouge); }
+.retour .titre { font-weight: 800; margin-bottom: 4px; }
+.retour .regle { font-size: .92rem; color: var(--encre-douce); }
+.retour .solution { font-weight: 800; }
+
+@keyframes monte { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* ---- Surlignage des écarts de dictée ---- */
+.diff { line-height: 2; font-size: 1.02rem; }
+.diff mark { border-radius: 6px; padding: 1px 4px; font-weight: 800; }
+.diff .ok       { background: none; color: var(--encre); }
+.diff .faux     { background: var(--rouge-clair); color: #991B1B; text-decoration: line-through; }
+.diff .attendu  { background: var(--vert-clair); color: #065F46; }
+.diff .manquant { background: var(--orange-clair); color: #92400E; }
+
+/* Correction lettre à lettre */
+.lettres { display: flex; flex-wrap: wrap; gap: 3px; font-size: 1.3rem; font-weight: 800; letter-spacing: .02em; }
+.lettres span { padding: 2px 4px; border-radius: 5px; }
+.lettres .l-ok    { color: var(--vert); }
+.lettres .l-faux  { color: #fff; background: var(--rouge); }
+.lettres .l-oubli { color: #fff; background: var(--orange); }
+
+/* ---- Calendrier de série ---- */
+.calendrier { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.calendrier .jour {
+  aspect-ratio: 1; border-radius: 10px; background: var(--bord);
+  display: grid; place-items: center; font-size: .7rem; font-weight: 800; color: var(--gris);
+}
+.calendrier .jour[data-actif="oui"] { background: var(--violet); color: #fff; }
+.calendrier .jour[data-aujourdhui="oui"] { outline: 2px solid var(--violet); outline-offset: 2px; }
+
+/* ---- Graphique en barres (7/30 jours) ---- */
+.graphique { display: flex; align-items: stretch; gap: 3px; height: 120px; padding-top: 8px; }
+/* Chaque colonne occupe toute la hauteur : les parts, en %, s'empilent depuis le bas. */
+.graphique .colonne { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; min-width: 0; }
+.graphique .part { border-radius: 3px; min-height: 2px; }
+.legende { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; font-size: .78rem; font-weight: 700; color: var(--encre-douce); }
+.legende span { display: inline-flex; align-items: center; gap: 5px; }
+.legende i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+/* ---- Liste des mots fragiles ---- */
+.fragile { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-bottom: 1px solid var(--bord); }
+.fragile:last-child { border-bottom: none; }
+.fragile .texte { flex: 1; min-width: 0; }
+.fragile .texte b { display: block; font-size: 1rem; }
+.fragile .texte small { color: var(--encre-douce); }
+.fragile .score { font-size: .8rem; font-weight: 800; color: var(--rouge); white-space: nowrap; }
+
+.vide { text-align: center; padding: 32px 16px; color: var(--encre-douce); }
+.vide .emoji { font-size: 2.5rem; display: block; margin-bottom: 8px; }

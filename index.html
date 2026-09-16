@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Défi Orthographe</title>
+<meta name="description" content="Entraînement à l'orthographe et aux dictées pour la 3e : accords sujet-verbe, lexique, imparfait, participe présent.">
+<meta name="theme-color" content="#7C3AED">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Défi Ortho">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/screens.css">
+</head>
+<body>
+  <main id="vue" class="app ecran" data-actif="oui" aria-live="polite">
+    <p class="vide"><span class="emoji">✍️</span>Chargement…</p>
+  </main>
+
+  <nav id="nav" class="nav" aria-label="Navigation principale" hidden></nav>
+
+  <noscript>
+    <p class="app" style="padding:24px">Cette application a besoin de JavaScript pour fonctionner.</p>
+  </noscript>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
