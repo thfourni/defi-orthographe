@@ -97,6 +97,20 @@ pour éviter le blocage devant un clavier vide. L'XP y est alors réduit de moit
 
 ### Correction
 
+Chaque erreur est classée par **nature**, et les deux peuvent tomber en même temps :
+
+- **faute d'orthographe** (lexicale) — le radical du mot, ses accents, ses doubles consonnes ;
+- **faute de grammaire** (grammaticale) — la terminaison, donc l'accord avec le sujet, la
+  personne, le temps.
+
+Une réponse comme « eclairaient » pour « éclairait » affiche donc deux blocs distincts : l'accent
+manquant d'un côté, et de l'autre l'explication de l'accord — « Le sujet est « la lumière » :
+3e personne du singulier (il / elle). À l'imparfait, on écrit donc -ait. Tu as écrit -aient, la
+terminaison de la 3e personne du pluriel. » Le diagnostic vit dans `js/analyse.js` : il découpe la
+forme en radical + terminaison, compare les deux séparément, et reconnaît au passage les
+terminaisons empruntées à un autre temps (« éclairai » = passé simple) et la règle du double i
+des verbes en -ier / -yer.
+
 - Mots isolés : comparaison **lettre à lettre** (distance d'édition), avec la lettre fautive
   pointée et un message distinct quand seuls les accents sont faux.
 - Dictée : comparaison **mot à mot** (plus longue sous-séquence commune), chaque écart étant

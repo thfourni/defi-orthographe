@@ -9,7 +9,8 @@ import { construireSession } from '../scheduler.js';
 import { categorie as infoCategorie, regle as infoRegle } from '../data.js';
 import * as voix from '../speech.js';
 import * as distracteurs from '../distracteurs.js';
-import { memeMot, seulementAccents, premiereDifference, diffLettres, diffMots, proche } from '../diff.js';
+import { memeMot, proche, diffLettres, diffMots } from '../diff.js';
+import { analyserForme, analyserMot, GENRES } from '../analyse.js';
 
 const SEUIL_QCM = 2; // après 2 échecs de suite sur un item, on propose un choix multiple
 
@@ -132,11 +133,16 @@ function rendreTrou(exo) {
 
   function valider() {
     if (session.reponseDonnee) return;
-    const resultats = champs.map(c => ({
-      saisi: (c.lire() || '').trim(),
-      attendu: c.trou.reponses[0],
-      juste: c.trou.reponses.some(r => memeMot(c.lire() || '', r))
-    }));
+    const resultats = champs.map(c => {
+      const saisi = (c.lire() || '').trim();
+      const juste = c.trou.reponses.some(r => memeMot(saisi, r));
+      return {
+        saisi, juste, attendu: c.trou.reponses[0],
+        analyse: juste ? { juste: true, fautes: [] } : analyserForme(saisi, c.trou.reponses[0], {
+          temps: c.trou.temps, personne: c.trou.personne, sujet: c.trou.sujet, infinitif: c.trou.infinitif
+        })
+      };
+    });
     const juste = resultats.every(r => r.juste);
     champs.forEach((c, i) => {
       if (c.noeud.tagName === 'INPUT') c.noeud.dataset.etat = resultats[i].juste ? 'juste' : 'faux';
@@ -146,10 +152,8 @@ function rendreTrou(exo) {
       });
     });
     const solution = resultats.map(r => r.attendu).join(', ');
-    const faute = resultats.find(r => !r.juste);
-    const precision = faute && faute.saisi && proche(faute.saisi, faute.attendu)
-      ? premiereDifference(faute.saisi, faute.attendu) : null;
-    terminerQuestion({ juste, solution, precision, indice: exo.trous[0].indice });
+    const fautes = resultats.flatMap(r => r.analyse.fautes);
+    terminerQuestion({ juste, solution, fautes, indice: exo.trous[0].indice });
   }
 
   cadre(el('div', { class: 'question' }, [
@@ -223,17 +227,11 @@ function rendreMot(exo) {
       if (b.textContent === exo.mot) b.dataset.etat = 'juste';
       else if (b.dataset.choisi === 'oui') b.dataset.etat = 'faux';
     });
-    // Si le mot écrit n'a rien à voir avec le mot attendu, une correction lettre à lettre
-    // n'apprend rien : on se contente alors de donner la bonne orthographe.
-    const ressemble = !juste && proche(texte, exo.mot);
-    const details = !juste && ressemble && saisie.noeud.tagName === 'INPUT' ? rendreLettres(texte, exo.mot) : null;
-    let precision = null;
-    if (!juste && ressemble) {
-      precision = seulementAccents(texte, exo.mot)
-        ? 'Tout est bon sauf les accents.'
-        : premiereDifference(texte, exo.mot);
-    }
-    terminerQuestion({ juste, solution: exo.mot, precision, indice: exo.piege, extra: details, contexte: exo.phraseContexte });
+    const analyse = juste ? { fautes: [] } : analyserMot(texte, exo.mot, { piege: exo.piege });
+    // La correction lettre à lettre n'a de sens que si le mot écrit ressemble au mot attendu.
+    const details = !juste && saisie.noeud.tagName === 'INPUT' && proche(texte, exo.mot)
+      ? rendreLettres(texte, exo.mot) : null;
+    terminerQuestion({ juste, solution: exo.mot, fautes: analyse.fautes, extra: details, contexte: exo.phraseContexte });
   }
 
   if (!voix.disponible()) {
@@ -340,7 +338,28 @@ function rendreTri(exo) {
 
 /* -------------------------------------------------- fin d'une question */
 
-function terminerQuestion({ juste, solution, precision, indice, extra, contexte }) {
+/** Intitulé du retour : c'est là que se lit la distinction orthographe / grammaire. */
+function titreRetour(juste, serie, xp, fautes) {
+  if (juste) return serie >= 3 ? `🔥 Série de ${serie} ! +${xp} XP` : `✅ Bravo ! +${xp} XP`;
+  const genres = new Set(fautes.map(f => f.genre));
+  if (genres.size > 1) return '❌ Deux natures de faute : orthographe et grammaire';
+  if (genres.has('lexicale')) return '❌ Faute d\'orthographe';
+  if (genres.has('grammaticale')) return '❌ Faute de grammaire';
+  return '❌ Presque…';
+}
+
+function rendreFautes(fautes) {
+  if (!fautes.length) return null;
+  return el('div', { class: 'fautes' }, fautes.map(f => {
+    const g = GENRES[f.genre] || GENRES.lexicale;
+    return el('div', { class: 'faute', dataset: { genre: f.genre } }, [
+      el('span', { class: 'etiquette-faute', text: `${g.emoji} ${g.libelle}` }),
+      el('p', {}, [el('b', { text: `${f.titre} — ` }), f.message])
+    ]);
+  }));
+}
+
+function terminerQuestion({ juste, solution, fautes = [], indice, extra, contexte }) {
   session.reponseDonnee = true;
   const exo = session.items[session.index];
   const premierEssai = !session.aideQcm;
@@ -352,23 +371,26 @@ function terminerQuestion({ juste, solution, precision, indice, extra, contexte 
 
   const xp = xpReponse({ juste, serie: session.serie, difficulte: exo.difficulte || 1, premierEssai });
   session.xpTotal += xp;
+
+  // Nature des fautes : orthographe (le mot) et/ou grammaire (l'accord). Conservée dans la
+  // progression pour que l'écran « à réviser » rappelle sur quoi l'élève a buté.
+  const natures = [...new Set(fautes.map(f => f.genre))];
   enregistrerReponse({
     id: exo.id, categorie: exo.categorie, juste, xp,
-    detail: juste ? null : { solution, quand: Date.now() }
+    detail: juste ? null : { solution, natures, quand: Date.now() }
   });
-
-  if (!juste) session.erreurs.push({ id: exo.id, categorie: exo.categorie, solution, regleId: exo.regleId });
+  if (!juste) session.erreurs.push({ id: exo.id, categorie: exo.categorie, solution, regleId: exo.regleId, natures });
 
   vibrer(juste ? 12 : [40, 60, 40]);
 
   const r = infoRegle(exo.regleId);
   const retour = el('div', { class: 'retour', dataset: { juste: juste ? 'oui' : 'non' }, role: 'status' }, [
-    el('div', { class: 'titre', text: juste ? (session.serie >= 3 ? `🔥 Série de ${session.serie} ! +${xp} XP` : `✅ Bravo ! +${xp} XP`) : '❌ Presque…' }),
+    el('div', { class: 'titre', text: titreRetour(juste, session.serie, xp, fautes) }),
     !juste && el('div', {}, [el('span', { text: 'La bonne réponse : ' }), el('span', { class: 'solution', text: solution })]),
-    precision && el('div', { class: 'regle', text: precision }),
+    !juste && rendreFautes(fautes),
     extra,
     contexte && !juste && el('div', { class: 'regle', text: contexte.replace('{mot}', solution) }),
-    !juste && r && el('div', { class: 'regle' }, [el('b', { text: `${r.titre} — ` }), r.explication]),
+    !juste && r && el('div', { class: 'regle' }, [el('b', { text: `La règle — ${r.titre} : ` }), r.explication]),
     !juste && !r && indice && el('div', { class: 'regle', text: indice })
   ]);
 

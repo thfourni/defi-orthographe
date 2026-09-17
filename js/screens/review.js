@@ -3,6 +3,14 @@ import { ajouter, el, entete, vide, pluriel } from '../ui.js';
 import { fragiles } from '../store.js';
 import { libelleItem, categorie as infoCategorie, regle as infoRegle } from '../data.js';
 
+/** Rappelle la nature de la dernière faute commise sur cet item. */
+function natureLisible(derniereErreur) {
+  const n = derniereErreur?.natures;
+  if (!n || !n.length) return null;
+  if (n.length > 1) return 'Dernière fois : orthographe + grammaire';
+  return n[0] === 'grammaticale' ? 'Dernière fois : faute de grammaire' : 'Dernière fois : faute d\'orthographe';
+}
+
 export function rendre(root, ctx) {
   const liste = fragiles();
 
@@ -33,7 +41,7 @@ export function rendre(root, ctx) {
         el('span', { class: 'emoji', text: cat.icone }),
         el('span', { class: 'texte' }, [
           el('b', { text: info.titre }),
-          el('small', { text: info.sous })
+          el('small', { text: natureLisible(f.derniereErreur) || info.sous })
         ]),
         el('span', { class: 'score', text: `${f.echecsTotal} ❌ / ${f.vus}` })
       ]);

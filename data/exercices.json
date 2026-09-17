@@ -49,6 +49,7 @@
           "infinitif": "être",
           "temps": "imparfait",
           "personne": "1s",
+          "sujet": "je",
           "reponses": [
             "étais"
           ],
@@ -70,6 +71,7 @@
           "infinitif": "dessiner",
           "temps": "imparfait",
           "personne": "1p",
+          "sujet": "la lune et moi",
           "reponses": [
             "dessinions"
           ],
@@ -91,6 +93,7 @@
           "infinitif": "s'ébranler",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "les fenêtres",
           "reponses": [
             "s'ébranlaient",
             "s’ébranlaient"
@@ -113,6 +116,7 @@
           "infinitif": "voleter",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "qui (= des oiseaux)",
           "reponses": [
             "voletaient"
           ],
@@ -133,6 +137,7 @@
           "infinitif": "veiller",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "mon père et ma mère",
           "reponses": [
             "veillaient"
           ],
@@ -153,6 +158,7 @@
           "infinitif": "mettre",
           "temps": "imparfait",
           "personne": "3s",
+          "sujet": "on",
           "reponses": [
             "mettait"
           ],
@@ -173,6 +179,7 @@
           "infinitif": "s'être",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "la plupart des domestiques",
           "reponses": [
             "s'étaient",
             "s’étaient"
@@ -194,6 +201,7 @@
           "infinitif": "se taire",
           "temps": "imparfait",
           "personne": "3s",
+          "sujet": "tout le monde",
           "reponses": [
             "se taisait"
           ],
@@ -214,6 +222,7 @@
           "infinitif": "passer",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "les longues soirées d’automne",
           "reponses": [
             "passaient"
           ],
@@ -234,6 +243,7 @@
           "infinitif": "résonner",
           "temps": "imparfait",
           "personne": "3s",
+          "sujet": "le bruit",
           "reponses": [
             "résonnait"
           ],
@@ -254,6 +264,7 @@
           "infinitif": "fermer",
           "temps": "imparfait",
           "personne": "1s",
+          "sujet": "qui (= moi)",
           "reponses": [
             "fermais"
           ],
@@ -274,6 +285,7 @@
           "infinitif": "s'asseoir",
           "temps": "imparfait",
           "personne": "1p",
+          "sujet": "Lucile et moi",
           "reponses": [
             "nous asseyions",
             "nous assoyions"
@@ -295,6 +307,7 @@
           "infinitif": "être",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "les murs et les tours",
           "reponses": [
             "étaient"
           ],
@@ -315,6 +328,7 @@
           "infinitif": "éclairer",
           "temps": "imparfait",
           "personne": "3s",
+          "sujet": "la lumière",
           "reponses": [
             "éclairait"
           ],
@@ -349,6 +363,7 @@
           "infinitif": "savoir",
           "temps": "présent",
           "personne": "2s",
+          "sujet": "qui (= toi)",
           "reponses": [
             "sais"
           ],
@@ -369,6 +384,7 @@
           "infinitif": "déchirer",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "les miaulements",
           "reponses": [
             "déchiraient"
           ],
@@ -389,6 +405,7 @@
           "infinitif": "empêcher",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "ni la peur ni le froid",
           "reponses": [
             "empêchaient"
           ],
@@ -423,6 +440,7 @@
           "infinitif": "enlever",
           "temps": "imparfait",
           "personne": "3s",
+          "sujet": "on",
           "reponses": [
             "enlevait"
           ],
@@ -432,6 +450,7 @@
           "infinitif": "se retirer",
           "temps": "imparfait",
           "personne": "3s",
+          "sujet": "on",
           "reponses": [
             "se retirait"
           ],
@@ -452,6 +471,7 @@
           "infinitif": "signifier",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "ces ombres",
           "reponses": [
             "signifiaient"
           ],
@@ -472,6 +492,7 @@
           "infinitif": "paraître",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "les escaliers",
           "reponses": [
             "paraissaient"
           ],
@@ -492,6 +513,7 @@
           "infinitif": "être",
           "temps": "imparfait",
           "personne": "2p",
+          "sujet": "mon frère et toi",
           "reponses": [
             "étiez"
           ],
@@ -526,6 +548,7 @@
           "infinitif": "faire",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "qui (= les vents d’automne)",
           "reponses": [
             "faisaient"
           ],
@@ -546,6 +569,7 @@
           "infinitif": "tourbillonner",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "les feuilles mortes",
           "reponses": [
             "tourbillonnaient"
           ],
@@ -566,6 +590,7 @@
           "infinitif": "battre",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "le vent, la pluie et le froid",
           "reponses": [
             "battaient"
           ],
@@ -586,6 +611,7 @@
           "infinitif": "regagner",
           "temps": "imparfait",
           "personne": "3s",
+          "sujet": "chacun",
           "reponses": [
             "regagnait"
           ],
@@ -606,6 +632,7 @@
           "infinitif": "durer",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "les histoires",
           "reponses": [
             "duraient"
           ],
@@ -640,6 +667,7 @@
           "infinitif": "entendre",
           "temps": "imparfait",
           "personne": "1s",
+          "sujet": "je",
           "reponses": [
             "entendais"
           ],
@@ -661,6 +689,7 @@
           "infinitif": "miauler",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "les chats",
           "reponses": [
             "miaulaient"
           ],
@@ -695,6 +724,7 @@
           "infinitif": "oublier",
           "temps": "imparfait",
           "personne": "1p",
+          "sujet": "nous",
           "reponses": [
             "oubliions"
           ],
@@ -715,6 +745,7 @@
           "infinitif": "voir",
           "temps": "imparfait",
           "personne": "2p",
+          "sujet": "vous",
           "reponses": [
             "voyiez"
           ],
@@ -749,6 +780,7 @@
           "infinitif": "chanter",
           "temps": "imparfait",
           "personne": "2s",
+          "sujet": "tu",
           "reponses": [
             "chantais"
           ],
@@ -769,6 +801,7 @@
           "infinitif": "porter",
           "temps": "imparfait",
           "personne": "3s",
+          "sujet": "mon père",
           "reponses": [
             "portait"
           ],
@@ -803,6 +836,7 @@
           "infinitif": "enlever",
           "temps": "imparfait",
           "personne": "3p",
+          "sujet": "les domestiques",
           "reponses": [
             "enlevaient"
           ],
@@ -823,6 +857,7 @@
           "infinitif": "craindre",
           "temps": "imparfait",
           "personne": "1p",
+          "sujet": "nous",
           "reponses": [
             "craignions"
           ],
@@ -843,6 +878,7 @@
           "infinitif": "rester",
           "temps": "imparfait",
           "personne": "1p",
+          "sujet": "nous",
           "reponses": [
             "restions"
           ],
@@ -877,6 +913,7 @@
           "infinitif": "sonner",
           "temps": "imparfait",
           "personne": "3s",
+          "sujet": "la cloche",
           "reponses": [
             "sonnait"
           ],
@@ -897,6 +934,7 @@
           "infinitif": "être",
           "temps": "imparfait",
           "personne": "3s",
+          "sujet": "il (impersonnel)",
           "reponses": [
             "était"
           ],

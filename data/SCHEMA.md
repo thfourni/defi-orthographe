@@ -61,6 +61,8 @@ Ajouter une catégorie suffit à la faire apparaître à l'accueil et dans les s
     {
       "infinitif": "être",           // affiché sous la phrase
       "temps": "imparfait",          // affiché entre parenthèses
+      "personne": "1s",              // 1s, 2s, 3s, 1p, 2p, 3p
+      "sujet": "je",                 // le sujet, tel qu'il sera cité dans l'explication
       "reponses": ["étais"],         // la 1re est LA solution montrée ; les autres sont acceptées
       "indice": "Le sujet « je » est placé après le verbe."
     }
@@ -71,6 +73,11 @@ Ajouter une catégorie suffit à la faire apparaître à l'accueil et dans les s
 - `{0}`, `{1}`… marquent l'emplacement des trous ; il en faut autant que d'entrées dans `trous`.
 - Mettre plusieurs `reponses` quand deux formes sont correctes (« nous asseyions » / « nous assoyions »).
 - La casse et la ponctuation sont tolérées à la correction ; **les accents comptent**.
+- `personne` et `sujet` servent à **expliquer la règle de conjugaison** en cas d'erreur : l'appli
+  écrit alors « Le sujet est « la lumière » : 3e personne du singulier (il / elle). À l'imparfait,
+  on écrit donc -ait. » Sans eux, la correction se contente de donner la bonne forme — les
+  renseigner est donc fortement conseillé. Citer le sujet tel qu'il figure dans la phrase, et
+  expliciter les relatifs : `"sujet": "qui (= des oiseaux)"`.
 
 ## Type `mot` — dictée d'un mot isolé
 
