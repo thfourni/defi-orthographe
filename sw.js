@@ -2,7 +2,7 @@
  * Service worker : l'appli fonctionne hors ligne après la première visite.
  * Change VERSION à chaque mise à jour du contenu pour forcer le rafraîchissement.
  */
-const VERSION = 'defi-ortho-v3';
+const VERSION = 'defi-ortho-v4';
 const FICHIERS = [
   '.', 'index.html', 'manifest.webmanifest',
   'css/base.css', 'css/components.css', 'css/screens.css',

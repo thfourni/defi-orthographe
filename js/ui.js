@@ -60,3 +60,13 @@ export function pluriel(n, singulier, pluriel = null) {
 }
 
 export const JOURS_COURTS = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+export const JOURS_LONGS = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
+export const MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+  'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+
+/** « jeudi 17 septembre », à partir d'une date AAAA-MM-JJ. */
+export function dateLisible(iso) {
+  const [a, m, j] = iso.split('-').map(Number);
+  const indexJour = (new Date(a, m - 1, j).getDay() + 6) % 7;
+  return `${JOURS_LONGS[indexJour]} ${j} ${MOIS[m - 1]}`;
+}

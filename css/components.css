@@ -141,7 +141,8 @@
 .calendrier { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
 .calendrier .jour {
   aspect-ratio: 1; border-radius: 10px; background: var(--bord);
-  display: grid; place-items: center; font-size: .7rem; font-weight: 800; color: var(--gris);
+  display: grid; place-items: center; font-weight: 800; color: var(--gris);
+  font-size: .85rem; font-variant-numeric: tabular-nums;
 }
 .calendrier .jour[data-actif="oui"] { background: var(--violet); color: #fff; }
 .calendrier .jour[data-aujourdhui="oui"] { outline: 2px solid var(--violet); outline-offset: 2px; }

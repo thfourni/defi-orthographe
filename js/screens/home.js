@@ -1,26 +1,33 @@
 /** Écran d'accueil : série du jour, XP, bouton de session, accès par catégorie. */
-import { ajouter, el, jauge, vibrer, pluriel, JOURS_COURTS } from '../ui.js';
+import { ajouter, el, jauge, vibrer, pluriel, dateLisible } from '../ui.js';
 import { lire, aujourdhui, ajouteJours } from '../store.js';
 import { infosNiveau, titreNiveau } from '../gamification.js';
 import { progressionCategories, nombreDus, TAILLE_SESSION } from '../scheduler.js';
 import { fragiles } from '../store.js';
 
+/**
+ * Fenêtre glissante des 7 derniers jours, aujourd'hui en dernière case.
+ * On affiche le quantième (et non l'initiale du jour) : la bande ne prétend pas
+ * être une semaine calendaire, qui commencerait un lundi.
+ */
 function calendrierSerie(etat) {
-  const jours = [];
   const jour = aujourdhui();
-  const actifs = new Set();
-  // On reconstitue les 7 derniers jours à partir de l'historique agrégé.
   const dates = new Set(etat.historique.map(h => h.date));
+  const jours = [];
   for (let i = 6; i >= 0; i--) {
     const d = ajouteJours(jour, -i);
-    if (dates.has(d)) actifs.add(d);
-    const [a, m, j] = d.split('-').map(Number);
-    const indexJour = (new Date(a, m - 1, j).getDay() + 6) % 7;
-    jours.push({ date: d, libelle: JOURS_COURTS[indexJour], actif: dates.has(d), aujourdhui: d === jour });
+    jours.push({
+      date: d,
+      quantieme: Number(d.split('-')[2]),
+      actif: dates.has(d),
+      aujourdhui: d === jour
+    });
   }
   return el('div', { class: 'calendrier' }, jours.map(j =>
     el('div', {
-      class: 'jour', text: j.libelle, title: j.date,
+      class: 'jour', text: String(j.quantieme),
+      title: `${dateLisible(j.date)}${j.actif ? ' — révisé ✓' : ''}`,
+      'aria-label': `${dateLisible(j.date)}${j.actif ? ', révisé' : ', pas de révision'}`,
       dataset: { actif: j.actif ? 'oui' : 'non', aujourdhui: j.aujourdhui ? 'oui' : 'non' }
     })
   ));
@@ -55,7 +62,7 @@ export function rendre(root, ctx) {
       el('div', { class: 'xp-restant', text: `Encore ${niveau.haut - etat.xp} XP avant le niveau ${niveau.niveau + 1}` })
     ]),
 
-    el('div', { class: 'section-titre', text: 'Ta semaine' }),
+    el('div', { class: 'section-titre', text: 'Tes 7 derniers jours' }),
     el('div', { class: 'carte' }, [calendrierSerie(etat)]),
 
     el('div', { class: 'section-titre', text: 'Entraînement' }),
