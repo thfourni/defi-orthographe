@@ -55,6 +55,9 @@
 .question .phrase .trou-place {
   display: inline-block; min-width: 88px; border-bottom: 3px dashed var(--violet);
   text-align: center; color: var(--violet);
+  /* line-height serré et alignement sur la ligne de base : sinon le tireté « flotte »
+     sous le texte, à cause du grand interligne de la phrase. */
+  line-height: 1.1; vertical-align: baseline; white-space: nowrap;
 }
 .question .infinitif { color: var(--violet); font-weight: 800; }
 .question .indice { font-size: .88rem; color: var(--encre-douce); margin-top: 10px; font-style: italic; }

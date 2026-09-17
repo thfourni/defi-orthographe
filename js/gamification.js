@@ -24,12 +24,17 @@ export function infosNiveau(xp) {
 export const TITRES = ['Apprentie', 'Copiste', 'Scribe', 'Plume agile', 'Calligraphe', 'Grammairienne', 'Maîtresse des mots', 'Académicienne'];
 export function titreNiveau(niveau) { return TITRES[Math.min(niveau, TITRES.length) - 1]; }
 
-/** XP d'une réponse, bonus de série compris. */
-export function xpReponse({ juste, serie, difficulte = 1, premierEssai = true }) {
+/**
+ * XP d'une réponse, bonus de série compris.
+ * Un indice demandé divise le gain par deux et annule le bonus de série : l'aide reste
+ * disponible sans jamais être gratuite.
+ */
+export function xpReponse({ juste, serie, difficulte = 1, premierEssai = true, avecIndice = false }) {
   if (!juste) return 0;
   let xp = XP_BASE + (difficulte - 1) * 3;
   if (!premierEssai) xp = Math.round(xp / 2);
-  if (serie > 0 && serie % 3 === 0) xp += XP_BONUS_SERIE;
+  if (avecIndice) xp = Math.max(1, Math.round(xp / 2));
+  if (!avecIndice && serie > 0 && serie % 3 === 0) xp += XP_BONUS_SERIE;
   return xp;
 }
 

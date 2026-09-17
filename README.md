@@ -95,6 +95,12 @@ Après **deux échecs de suite** sur un même item, la saisie au clavier est rem
 multiple (avec des propositions fausses mais plausibles, générées dans `js/distracteurs.js`),
 pour éviter le blocage devant un clavier vide. L'XP y est alors réduit de moitié.
 
+L'**indice** de l'exercice (et, pour les mots, le piège d'orthographe) n'est pas affiché
+d'emblée : il faut le demander. Le demander divise les points par deux, annule le bonus de série,
+et, en cas de bonne réponse, laisse l'item dans sa boîte de révision au lieu de le faire
+progresser — réussir avec de l'aide ne prouve pas que c'est acquis. L'aide reste donc toujours
+disponible, mais jamais gratuite.
+
 ### Correction
 
 Chaque erreur est classée par **nature**, et les deux peuvent tomber en même temps :

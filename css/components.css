@@ -96,6 +96,17 @@
 
 @keyframes monte { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
+/* ---- Indice masqué ---- */
+.zone-indice { margin-top: 14px; }
+.btn-indice {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 44px; padding: 10px 16px; border-radius: 99px;
+  background: var(--orange-clair); color: #92400E; font-weight: 800; font-size: .92rem;
+  border: 2px solid transparent;
+}
+.btn-indice small { font-weight: 700; opacity: .75; font-size: .74rem; }
+.btn-indice:active { transform: scale(.97); }
+
 /* ---- Fautes détaillées : une par nature (orthographe / grammaire) ---- */
 .fautes { display: grid; gap: 10px; margin: 12px 0 4px; }
 .faute {

@@ -95,14 +95,16 @@ export function fiche(id, categorie) {
  * Enregistre une réponse : Leitner (boîte + prochaine date), compteurs, XP et historique du jour.
  * Renvoie l'XP réellement accordé.
  */
-export function enregistrerReponse({ id, categorie, juste, xp = 0, detail = null }) {
+export function enregistrerReponse({ id, categorie, juste, xp = 0, detail = null, avecIndice = false }) {
   const f = fiche(id, categorie);
   const jour = aujourdhui();
   f.vus += 1;
   if (juste) {
     f.reussis += 1;
     f.echecsConsecutifs = 0;
-    f.boite = Math.min(f.boite + 1, BOITE_MAX);
+    // Une réussite obtenue avec un indice ne prouve pas que l'item est acquis :
+    // il reste dans sa boîte au lieu de passer à la suivante.
+    if (!avecIndice) f.boite = Math.min(f.boite + 1, BOITE_MAX);
   } else {
     f.echecsConsecutifs += 1;
     f.echecsTotal += 1;

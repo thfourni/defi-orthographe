@@ -61,6 +61,24 @@ function quitter() {
   s.ctx.aller('accueil');
 }
 
+/**
+ * Indice masqué derrière un bouton : le voir coûte la moitié des points, donc l'élève
+ * essaie d'abord seule. Une fois révélé, il reste affiché jusqu'à la question suivante.
+ */
+function zoneIndice(texte) {
+  if (!texte) return null;
+  const zone = el('div', { class: 'zone-indice' });
+  const bouton = el('button', {
+    class: 'btn-indice', type: 'button',
+    onClick: () => {
+      session.indiceUtilise = true;
+      vider(zone).append(el('p', { class: 'indice', role: 'status', text: `💡 ${texte}` }));
+    }
+  }, ['💡 Voir un indice', el('small', { text: '− la moitié des XP' })]);
+  zone.append(bouton);
+  return zone;
+}
+
 function boutonValider(libelle, action, actif = true) {
   const b = el('button', { class: 'btn btn--primaire btn--bloc btn--grand', text: libelle, onClick: action });
   b.disabled = !actif;
@@ -72,6 +90,7 @@ function boutonValider(libelle, action, actif = true) {
 function afficherQuestion() {
   const exo = session.items[session.index];
   session.reponseDonnee = false;
+  session.indiceUtilise = false;
   const f = fiche(exo.id, exo.categorie);
   session.aideQcm = (exo.type === 'trou' || exo.type === 'mot') && f.echecsConsecutifs >= SEUIL_QCM;
   session.etaitFragile = f.echecsConsecutifs > 0 || f.echecsTotal >= 2;
@@ -159,7 +178,7 @@ function rendreTrou(exo) {
   cadre(el('div', { class: 'question' }, [
     el('div', { class: 'consigne', text: 'Conjugue correctement le verbe.' }),
     phrase, zone,
-    exo.trous[0].indice && el('p', { class: 'indice', text: `💡 ${exo.trous[0].indice}` })
+    zoneIndice(exo.trous[0].indice)
   ]), [bouton]);
 }
 
@@ -245,7 +264,8 @@ function rendreMot(exo) {
       voix.disponible() ? boutonEcoute : el('p', { class: 'phrase', text: '🔇 Audio indisponible sur cet appareil' }),
       voix.disponible() && choixDebit
     ]),
-    el('div', { class: 'saisie-groupe' }, [zone])
+    el('div', { class: 'saisie-groupe' }, [zone]),
+    zoneIndice(exo.piege && `Le piège : ${exo.piege}.`)
   ]), [bouton]);
 
   if (voix.disponible()) setTimeout(dire, 250);
@@ -339,8 +359,8 @@ function rendreTri(exo) {
 /* -------------------------------------------------- fin d'une question */
 
 /** Intitulé du retour : c'est là que se lit la distinction orthographe / grammaire. */
-function titreRetour(juste, serie, xp, fautes) {
-  if (juste) return serie >= 3 ? `🔥 Série de ${serie} ! +${xp} XP` : `✅ Bravo ! +${xp} XP`;
+function titreRetour(juste, serie, xp, fautes, avecIndice = false) {
+  if (juste) return serie >= 3 && !avecIndice ? `🔥 Série de ${serie} ! +${xp} XP` : `✅ Bravo ! +${xp} XP`;
   const genres = new Set(fautes.map(f => f.genre));
   if (genres.size > 1) return '❌ Deux natures de faute : orthographe et grammaire';
   if (genres.has('lexicale')) return '❌ Faute d\'orthographe';
@@ -369,14 +389,15 @@ function terminerQuestion({ juste, solution, fautes = [], indice, extra, context
   if (juste) session.justes += 1;
   if (juste && session.etaitFragile) session.fragilesRattrapes += 1;
 
-  const xp = xpReponse({ juste, serie: session.serie, difficulte: exo.difficulte || 1, premierEssai });
+  const avecIndice = !!session.indiceUtilise;
+  const xp = xpReponse({ juste, serie: session.serie, difficulte: exo.difficulte || 1, premierEssai, avecIndice });
   session.xpTotal += xp;
 
   // Nature des fautes : orthographe (le mot) et/ou grammaire (l'accord). Conservée dans la
   // progression pour que l'écran « à réviser » rappelle sur quoi l'élève a buté.
   const natures = [...new Set(fautes.map(f => f.genre))];
   enregistrerReponse({
-    id: exo.id, categorie: exo.categorie, juste, xp,
+    id: exo.id, categorie: exo.categorie, juste, xp, avecIndice,
     detail: juste ? null : { solution, natures, quand: Date.now() }
   });
   if (!juste) session.erreurs.push({ id: exo.id, categorie: exo.categorie, solution, regleId: exo.regleId, natures });
@@ -385,7 +406,7 @@ function terminerQuestion({ juste, solution, fautes = [], indice, extra, context
 
   const r = infoRegle(exo.regleId);
   const retour = el('div', { class: 'retour', dataset: { juste: juste ? 'oui' : 'non' }, role: 'status' }, [
-    el('div', { class: 'titre', text: titreRetour(juste, session.serie, xp, fautes) }),
+    el('div', { class: 'titre', text: titreRetour(juste, session.serie, xp, fautes, avecIndice) + (avecIndice && juste ? ' (indice utilisé)' : '') }),
     !juste && el('div', {}, [el('span', { text: 'La bonne réponse : ' }), el('span', { class: 'solution', text: solution })]),
     !juste && rendreFautes(fautes),
     extra,
